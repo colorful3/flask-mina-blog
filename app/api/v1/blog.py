@@ -5,7 +5,6 @@ from app.libs.c_blueprint import CBlueprint
 from app.libs.error_code import NotFound
 from app.models.posts import Flposts
 from app.models.term_texonomy import FltermTaxonomy
-from app.validaters.forms import BlogListForm
 
 __author__ = 'Colorful'
 __date__ = '2018/8/19 下午1:09'
@@ -27,7 +26,7 @@ def get_list():
     return jsonify(data)
 
 
-@api.route('/<int:id>')
+@api.route('/<int:id>', methods=['GET'])
 def get_single(id):
     post = Flposts.query.filter(
         Flposts.post_title != '',
@@ -40,17 +39,37 @@ def get_single(id):
     return jsonify(post)
 
 
-@api.route('/<int:cid>/by_cate')
+@api.route('/<int:cid>/by_cate', methods=['GET'])
 def by_category(cid):
     args = request.args.to_dict()
     start = int(args['start'])
     count = int(args['count'])
-    posts = Flposts.paginate_data_by_category(cid, start, count)
+    taxonomy = FltermTaxonomy()
+    taxonomy.cate_index(cid)
+    cids = tuple(taxonomy.cate_ids)
+    posts = Flposts.paginate_data_by_category(
+        cids, start, count
+    )
     return jsonify(posts)
+
+
+@api.route('/<string:date>/by_date', methods=['GET'])
+def by_date(date):
+    args = request.args.to_dict()
+    start = int(args['start'])
+    count = int(args['count'])
+    post_date = date.replace('年', '-').replace('月', '')
+    data = Flposts.query.filter(
+        Flposts.post_date.like(post_date + '%')
+    ).paginate(start, count)
+    if not data:
+        raise NotFound()
+    return jsonify(data.items)
 
 
 @api.route('/test')
 def test():
-    info = FltermTaxonomy().cate_index(30)
-    print(info)
-    return 'success'
+    obj = FltermTaxonomy()
+    obj.cate_index(21)
+    ids = obj.cate_ids
+    return jsonify(ids)

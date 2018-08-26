@@ -1,8 +1,9 @@
 # -*- coding: utf8 -*-
-from sqlalchemy import Column, BigInteger, DateTime, Text, String, Integer, orm
+from sqlalchemy import Column, BigInteger, DateTime, Text, String, Integer, orm, or_, func, inspect
 import re
 
-from app.models.base import Base
+from app.libs.error_code import NotFound
+from app.models.base import Base, db
 from app.models.term_texonomy import FltermRelationships
 
 __author__ = 'Colorful'
@@ -60,9 +61,14 @@ class Flposts(Base):
 
     @property
     def image(self):
-        attachment = Flposts.query.filter_by(
-            post_parent=self.ID,
-            post_type='attachment'
+        attachment = Flposts.query.filter(
+            Flposts.post_parent == self.ID,
+            Flposts.post_type == 'attachment',
+            or_(
+                Flposts.guid.like('%.png'),
+                Flposts.guid.like('%.jpeg'),
+                Flposts.guid.like('%.jpg')
+            )
         ).first()
         return '' if not attachment else attachment['guid']
 
@@ -90,7 +96,8 @@ class Flposts(Base):
         )
 
     @staticmethod
-    def paginate_data_by_category(cid, start=1, count=20):
+    def paginate_data_by_category(cids, start=1, count=20):
+        """分页得到相应大分类的数据"""
         query = Flposts.query.join(
             FltermRelationships,
             Flposts.ID == FltermRelationships.object_id
@@ -98,13 +105,15 @@ class Flposts(Base):
             Flposts.post_title != '',
             Flposts.post_content != '',
             Flposts.post_status == 'publish',
-            FltermRelationships.term_taxonomy_id == cid
+            FltermRelationships.term_taxonomy_id.in_(cids)
         ).with_entities(
             Flposts.ID, Flposts.comment_count, Flposts.post_content,
             Flposts.post_date, Flposts.post_modified,
             Flposts.post_title, FltermRelationships.term_taxonomy_id
         ).order_by(
             Flposts.post_date.desc()
+        ).group_by(
+            Flposts.ID
         )
 
         result = query.paginate(start, count)
@@ -112,6 +121,7 @@ class Flposts(Base):
             Flposts.process_cate_data(dict(zip(post.keys(), post)))
             for post in result.items
         ]
+
         return dict(
             blogs=ret,
             count=count,
@@ -124,9 +134,14 @@ class Flposts(Base):
         """受wordpress数据库设计的限制，我的代码只能暂时这么设计，
         （可能会有新能问题，不过对于并发量小的博客不至于有性能问题），
         以后有好的方案会修改这里的代码"""
-        attachment = Flposts.query.filter_by(
-            post_parent=row['ID'],
-            post_type='attachment'
+        attachment = Flposts.query.filter(
+            Flposts.post_parent == row['ID'],
+            Flposts.post_type == 'attachment',
+            or_(
+                Flposts.guid.like('%.png'),
+                Flposts.guid.like('%.jpeg'),
+                Flposts.guid.like('%.jpg')
+            )
         ).first()
         image = '' if not attachment else attachment['guid']
         row['image'] = image
@@ -141,3 +156,18 @@ class Flposts(Base):
             post_description = post_content
         row['post_description'] = post_description
         return row
+
+    @staticmethod
+    def get_archive():
+        """得到文章归档的相关信息"""
+        s = db.session()
+        res = s.execute(
+            "SELECT COUNT(1) AS 'total', DATE_FORMAT(`post_date`, '%Y %m') AS 'date' FROM\
+             flposts GROUP BY  DATE_FORMAT(`post_date`, '%Y %m') ORDER BY `post_date` DESC "
+        ).fetchall()
+
+        if not res:
+            raise NotFound()
+
+        ret = [item[1][0:4] + '年' + item[1][-2:] + '月' for item in res]
+        return ret

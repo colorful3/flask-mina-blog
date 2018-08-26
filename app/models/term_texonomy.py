@@ -22,20 +22,47 @@ class FltermTaxonomy(Base):
             'term_taxonomy_id', 'term_id', 'taxonomy',
             'parent', 'count'
         ]
+        self.cate_ids = []
+        # 对外开放的分类
+        self.open_cate = [
+            '日常', '网络博客', '数据库',
+            '算法', '前端', '后端', '运维'
+        ]
 
-    @staticmethod
-    def get_category():
+    def cate_index(self, cid):
+        self.cate_ids.append(cid)
+        categorys = FltermTaxonomy.query.filter_by(parent=cid).all()
+        [self.cate_ids.append(cate.term_taxonomy_id) for cate in categorys]
+        if categorys:
+            for id in self.cate_ids:
+                categorys = FltermTaxonomy.query.filter_by(parent=id).all()
+                [self.cate_ids.append(cate.term_taxonomy_id) for cate in categorys]
+        self.cate_ids = list(set(self.cate_ids))
+        pass
+
+    def get_parent_category(self):
         categorys = FltermTaxonomy.query.join(
             Flterms,
             FltermTaxonomy.term_id == Flterms.term_id
         ).filter(
             FltermTaxonomy.taxonomy == 'category',
+            FltermTaxonomy.parent == 0
         ).with_entities(
             Flterms.name, FltermTaxonomy.term_id,
             FltermTaxonomy.parent, FltermTaxonomy.count
         ).all()
         ret = [dict(zip(category.keys(), category)) for category in categorys]
-        return ret
+        new_ret = []
+        for item in ret:
+            if item['name'] in self.open_cate:
+                new_ret.append(item)
+        new_ret.insert(0, {
+            "count": 0,
+            "name": "全部",
+            "parent": 0,
+            "term_id": 0
+        })
+        return new_ret
 
 
 class FltermRelationships(Base):
