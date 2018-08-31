@@ -12,22 +12,22 @@
     * [错误码(error_code)](README.md#错误码)
     
 - [首页](README.md#首页)
-    ![首页截图](/app/static/images/home.jpeg)
+    >>>>![首页截图](/app/static/images/home.jpeg)
     * [获取banner](README.md#获取banner)
     * [获取博客列表](README.md#获取博客列表)
     
 - [分类页](README.md#分类页)
-    ![分类页截图](/app/static/images/cate.jpeg)
+    >>>>![分类页截图](/app/static/images/cate.jpeg)
     * [获取所有一级分类](README.md#获取所有一级分类)
     * [根据分类获取博客列表](README.md#根据分类获取博客列表)
     
 - [归档页](README.md#归档页)
-    ![归档页截图](/app/static/images/archive.jpeg)
+    >>>>![归档页截图](/app/static/images/archive.jpeg)
     * [获取归档列表](README.md#获取归档列表)
     * [根据年月获取归档列表](README.md#根据年月获取归档列表)
 
 - [博客详情页](README.md#博客详情页)
-    ![博客详情页](/app/static/images/detail.jpeg)
+    >>>>![博客详情页](/app/static/images/detail.jpeg)
     * [获取博客详情](README.md#获取博客详情)
     * [获取评论列表](README.md#获取评论列表)
      
