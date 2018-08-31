@@ -60,7 +60,10 @@ def by_date(date):
     count = int(args['count'])
     post_date = date.replace('年', '-').replace('月', '')
     data = Flposts.query.filter(
-        Flposts.post_date.like(post_date + '%')
+        Flposts.post_date.like(post_date + '%'),
+        Flposts.post_title != '',
+        Flposts.post_content != '',
+        Flposts.post_status == 'publish'
     ).paginate(start, count)
     if not data:
         raise NotFound()
