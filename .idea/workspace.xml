@@ -4,7 +4,6 @@
     <list default="true" id="5ce67865-b1b9-4d87-b72b-8fdcc6dc8612" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/app/api/v1/blog.py" afterPath="$PROJECT_DIR$/app/api/v1/blog.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,32 +49,42 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="512">
-                <caret line="31" column="32" lean-forward="false" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+              <first_editor relative-caret-position="638">
+                <caret line="29" column="17" lean-forward="false" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
                 <folding>
-                  <marker date="1535710044000" expanded="true" signature="2246:3088" ph="[...]" />
-                  <marker date="1535710044000" expanded="true" signature="2252:2452" ph="{&quot;ID&quot;: 4...}" />
-                  <marker date="1535710044000" expanded="true" signature="2458:2649" ph="{&quot;ID&quot;: 3...}" />
-                  <marker date="1535710044000" expanded="true" signature="2655:2863" ph="{&quot;ID&quot;: 2...}" />
-                  <marker date="1535710044000" expanded="true" signature="2869:3086" ph="{&quot;ID&quot;: 1...}" />
-                  <marker date="1535710044000" expanded="true" signature="3236:9978" ph="{&quot;count&quot;: 2...}" />
-                  <marker date="1535710044000" expanded="true" signature="3251:9927" ph="[...]" />
-                  <marker date="1535710044000" expanded="true" signature="3261:5881" ph="{&quot;ID&quot;: 534...}" />
-                  <marker date="1535710044000" expanded="true" signature="5891:9921" ph="{&quot;ID&quot;: 526...}" />
-                  <marker date="1535710044000" expanded="true" signature="10232:10429" ph="[...]" />
-                  <marker date="1535710044000" expanded="true" signature="10238:10329" ph="{&quot;name&quot;: &quot;全部&quot;...}" />
-                  <marker date="1535710044000" expanded="true" signature="10335:10427" ph="{&quot;name&quot;: &quot;日常&quot;...}" />
-                  <marker date="1535710044000" expanded="true" signature="10696:17510" ph="{&quot;count&quot;: 20...}" />
-                  <marker date="1535710044000" expanded="true" signature="10711:17459" ph="[...]" />
-                  <marker date="1535710044000" expanded="true" signature="10721:13377" ph="{&quot;ID&quot;: 534...}" />
-                  <marker date="1535710044000" expanded="true" signature="13387:17453" ph="{&quot;ID&quot;: 526...}" />
-                  <marker date="1535710044000" expanded="true" signature="17571:17653" ph="[...]" />
-                  <marker date="1535710044000" expanded="true" signature="17809:18897" ph="[...]" />
-                  <marker date="1535710044000" expanded="true" signature="17815:18895" ph="{&quot;ID&quot;: 191...}" />
-                  <marker date="1535710044000" expanded="true" signature="18963:20599" ph="{&quot;ID&quot;: 335...}" />
+                  <marker date="1535710386000" expanded="true" signature="2262:3104" ph="[...]" />
+                  <marker date="1535710386000" expanded="true" signature="2268:2468" ph="{&quot;ID&quot;: 4...}" />
+                  <marker date="1535710386000" expanded="true" signature="2474:2665" ph="{&quot;ID&quot;: 3...}" />
+                  <marker date="1535710386000" expanded="true" signature="2671:2879" ph="{&quot;ID&quot;: 2...}" />
+                  <marker date="1535710386000" expanded="true" signature="2885:3102" ph="{&quot;ID&quot;: 1...}" />
+                  <marker date="1535710386000" expanded="true" signature="3252:9994" ph="{&quot;count&quot;: 2...}" />
+                  <marker date="1535710386000" expanded="true" signature="3267:9943" ph="[...]" />
+                  <marker date="1535710386000" expanded="true" signature="3277:5897" ph="{&quot;ID&quot;: 534...}" />
+                  <marker date="1535710386000" expanded="true" signature="5907:9937" ph="{&quot;ID&quot;: 526...}" />
+                  <marker date="1535710386000" expanded="true" signature="10248:10445" ph="[...]" />
+                  <marker date="1535710386000" expanded="true" signature="10254:10345" ph="{&quot;name&quot;: &quot;全部&quot;...}" />
+                  <marker date="1535710386000" expanded="true" signature="10351:10443" ph="{&quot;name&quot;: &quot;日常&quot;...}" />
+                  <marker date="1535710386000" expanded="true" signature="10712:17526" ph="{&quot;count&quot;: 20...}" />
+                  <marker date="1535710386000" expanded="true" signature="10727:17475" ph="[...]" />
+                  <marker date="1535710386000" expanded="true" signature="10737:13393" ph="{&quot;ID&quot;: 534...}" />
+                  <marker date="1535710386000" expanded="true" signature="13403:17469" ph="{&quot;ID&quot;: 526...}" />
+                  <marker date="1535710386000" expanded="true" signature="17587:17669" ph="[...]" />
+                  <marker date="1535710386000" expanded="true" signature="17825:18913" ph="[...]" />
+                  <marker date="1535710386000" expanded="true" signature="17831:18911" ph="{&quot;ID&quot;: 191...}" />
+                  <marker date="1535710386000" expanded="true" signature="18979:20615" ph="{&quot;ID&quot;: 335...}" />
                 </folding>
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="24" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -210,12 +219,6 @@
               <item name="mina-blog" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="mina-blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mina-blog" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -332,7 +335,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.75" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -706,13 +709,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-597">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/api/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -786,32 +782,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="24" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="512">
-            <caret line="31" column="32" lean-forward="false" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+          <first_editor relative-caret-position="638">
+            <caret line="29" column="17" lean-forward="false" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
             <folding>
-              <marker date="1535710044000" expanded="true" signature="2246:3088" ph="[...]" />
-              <marker date="1535710044000" expanded="true" signature="2252:2452" ph="{&quot;ID&quot;: 4...}" />
-              <marker date="1535710044000" expanded="true" signature="2458:2649" ph="{&quot;ID&quot;: 3...}" />
-              <marker date="1535710044000" expanded="true" signature="2655:2863" ph="{&quot;ID&quot;: 2...}" />
-              <marker date="1535710044000" expanded="true" signature="2869:3086" ph="{&quot;ID&quot;: 1...}" />
-              <marker date="1535710044000" expanded="true" signature="3236:9978" ph="{&quot;count&quot;: 2...}" />
-              <marker date="1535710044000" expanded="true" signature="3251:9927" ph="[...]" />
-              <marker date="1535710044000" expanded="true" signature="3261:5881" ph="{&quot;ID&quot;: 534...}" />
-              <marker date="1535710044000" expanded="true" signature="5891:9921" ph="{&quot;ID&quot;: 526...}" />
-              <marker date="1535710044000" expanded="true" signature="10232:10429" ph="[...]" />
-              <marker date="1535710044000" expanded="true" signature="10238:10329" ph="{&quot;name&quot;: &quot;全部&quot;...}" />
-              <marker date="1535710044000" expanded="true" signature="10335:10427" ph="{&quot;name&quot;: &quot;日常&quot;...}" />
-              <marker date="1535710044000" expanded="true" signature="10696:17510" ph="{&quot;count&quot;: 20...}" />
-              <marker date="1535710044000" expanded="true" signature="10711:17459" ph="[...]" />
-              <marker date="1535710044000" expanded="true" signature="10721:13377" ph="{&quot;ID&quot;: 534...}" />
-              <marker date="1535710044000" expanded="true" signature="13387:17453" ph="{&quot;ID&quot;: 526...}" />
-              <marker date="1535710044000" expanded="true" signature="17571:17653" ph="[...]" />
-              <marker date="1535710044000" expanded="true" signature="17809:18897" ph="[...]" />
-              <marker date="1535710044000" expanded="true" signature="17815:18895" ph="{&quot;ID&quot;: 191...}" />
-              <marker date="1535710044000" expanded="true" signature="18963:20599" ph="{&quot;ID&quot;: 335...}" />
+              <marker date="1535710386000" expanded="true" signature="2262:3104" ph="[...]" />
+              <marker date="1535710386000" expanded="true" signature="2268:2468" ph="{&quot;ID&quot;: 4...}" />
+              <marker date="1535710386000" expanded="true" signature="2474:2665" ph="{&quot;ID&quot;: 3...}" />
+              <marker date="1535710386000" expanded="true" signature="2671:2879" ph="{&quot;ID&quot;: 2...}" />
+              <marker date="1535710386000" expanded="true" signature="2885:3102" ph="{&quot;ID&quot;: 1...}" />
+              <marker date="1535710386000" expanded="true" signature="3252:9994" ph="{&quot;count&quot;: 2...}" />
+              <marker date="1535710386000" expanded="true" signature="3267:9943" ph="[...]" />
+              <marker date="1535710386000" expanded="true" signature="3277:5897" ph="{&quot;ID&quot;: 534...}" />
+              <marker date="1535710386000" expanded="true" signature="5907:9937" ph="{&quot;ID&quot;: 526...}" />
+              <marker date="1535710386000" expanded="true" signature="10248:10445" ph="[...]" />
+              <marker date="1535710386000" expanded="true" signature="10254:10345" ph="{&quot;name&quot;: &quot;全部&quot;...}" />
+              <marker date="1535710386000" expanded="true" signature="10351:10443" ph="{&quot;name&quot;: &quot;日常&quot;...}" />
+              <marker date="1535710386000" expanded="true" signature="10712:17526" ph="{&quot;count&quot;: 20...}" />
+              <marker date="1535710386000" expanded="true" signature="10727:17475" ph="[...]" />
+              <marker date="1535710386000" expanded="true" signature="10737:13393" ph="{&quot;ID&quot;: 534...}" />
+              <marker date="1535710386000" expanded="true" signature="13403:17469" ph="{&quot;ID&quot;: 526...}" />
+              <marker date="1535710386000" expanded="true" signature="17587:17669" ph="[...]" />
+              <marker date="1535710386000" expanded="true" signature="17825:18913" ph="[...]" />
+              <marker date="1535710386000" expanded="true" signature="17831:18911" ph="{&quot;ID&quot;: 191...}" />
+              <marker date="1535710386000" expanded="true" signature="18979:20615" ph="{&quot;ID&quot;: 335...}" />
             </folding>
           </first_editor>
           <second_editor />
